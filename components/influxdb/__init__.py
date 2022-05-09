@@ -64,7 +64,7 @@ def to_code(config):
         )
     )
     for sensor_id, sensor_config in config[CONF_SENSORS].items():
-        if sensor_config[CONF_IGNORE] == False:
+        if sensor_config[CONF_IGNORE] is False:
             tags = "".join(
                 ",{}={}".format(tag, value)
                 for tag, value in {
