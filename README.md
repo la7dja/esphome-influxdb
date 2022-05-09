@@ -6,11 +6,17 @@ InfluxDB database with UDP.
 
 ## Installation
 
-Clone this repository into `custom_components/influxdb` from the directory
-where your ESPHome configuration is stored.
-
 ```bash
 git clone https://github.com/la7dja/esphome-influxdb custom_components/influxdb
+```
+
+## Installation
+
+You can install this component with [ESPHome external components feature](https://esphome.io/components/external_components.html) like this:
+
+```yaml
+external_components:
+  - source: github://la7dja/esphome-influxdb@master
 ```
 
 ## Usage
