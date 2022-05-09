@@ -20,7 +20,7 @@ namespace influxdb {
 
 class InfluxDBWriter : public Component {
  public:
-  InfluxDBWriter() : packet_size(0) { };
+  InfluxDBWriter() : packet_size(0){};
   void setup() override;
   void loop() override;
   void dump_config() override;
@@ -40,7 +40,7 @@ class InfluxDBWriter : public Component {
   void set_max_packet_size(int size) { max_packet_size = size; };
   void set_tags(std::string tags) { this->tags = tags; };
   void set_publish_all(bool all) { publish_all = all; };
-  void add_setup_callback(std::function<EntityBase*()> fun) { setup_callbacks.push_back(fun); };
+  void add_setup_callback(std::function<EntityBase *()> fun) { setup_callbacks.push_back(fun); };
 
  protected:
   void write(std::string measurement, std::string tags, const std::string value, bool is_string);
@@ -59,5 +59,5 @@ class InfluxDBWriter : public Component {
   int packet_timeout;
 };
 
-}  // namespace api
+}  // namespace influxdb
 }  // namespace esphome
